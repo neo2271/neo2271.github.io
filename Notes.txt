@@ -1,0 +1,19 @@
+- Text to HTML:
+    https://www.textfixer.com/html/convert-text-html.php
+
+
+- LSD Software: http://lsdsoftware.com/
+    + Read Aloud Text-to-Speech Tools:
+        https://readaloud.app/
+
+    + Read Aloud Browser Extensions:
+        - Chrome:
+            https://chrome.google.com/webstore/detail/hdhinadidafjejdhmfkjgnolgimiaplp
+        - Firefox:
+            https://addons.mozilla.org/en-US/firefox/addon/read-aloud/
+
+    + Embed A TTS Widget Into Your Website: https://dashboard.sitespeaker.com
+        https://dashboard.sitespeaker.com/?p=SignUp
+
+        - If you use WordPress, install our WordPress plugin:
+            https://wordpress.org/plugins/sitespeaker-widget/
