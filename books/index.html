@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>notepad.pw / somfhqp82</title>
+    <style type="text/css">
+    body {
+        font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+        font-size: 13px
+    }
+
+    .push {
+        margin-top: 3%;
+        margin-bottom: 3%
+    }
+
+    .area {
+        word-wrap: break-word;
+        padding: 2%;
+        background: #fff;
+        border-radius: 3px;
+        width: 80%;
+        margin: 0 auto
+    }
+
+    .preit {
+        white-space: pre-wrap
+    }
+
+    </style>
+    <link href="//notepad.pw/content/css/markdown.css?100" rel="stylesheet" media="screen" type="text/css">
+</head>
+
+<body>
+    <div id="ra-player" data-skin="https://assets.sitespeaker.com/embed/skins/default">
+    <div class="ra-button" onclick="readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'))"><img src="https://assets.sitespeaker.com/embed/skins/default/play-icon.png" /> Listen to this article</div>
+    </div>
+    <audio id="ra-audio" data-lang="vi-VN" data-voice="Google vi-VN-Standard-A" data-key="348dc83cbfb50dd27ce88625a23dbc79"></audio>
+
+    <div style='display:none' id='sbbhscc'></div>
+    <script type="text/javascript">
+    var sbbvscc = '';
+    var sbbgscc = '';
+
+    function genPid() { return String.fromCharCode(88) + String.fromCharCode(108); };
+
+    </script>
+    <div id='sbbfrcc' style='position: absolute; top: -10px; left: 30px; font-size:1px'></div>
+    <script type="text/javascript">
+    (function(XHR) {
+        var open = XHR.prototype.open;
+        var send = XHR.prototype.send;
+        var parser = document.createElement('a');
+        XHR.prototype.open = function(method, url, async, user, pass) {
+            if (typeof async =='undefined') { async = true; } parser.href = url;
+            if (parser.host == '') { parser.href = parser.href; } this.ajax_hostname = parser.hostname;
+            open.call(this, method, url, async, user, pass);
+        };
+        XHR.prototype.send = function(data) {
+            if (location.hostname == this.ajax_hostname) this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");
+            send.call(this, data);
+        }
+    })(XMLHttpRequest);
+    if (typeof(fetch) != "undefined") {
+        var nsbbfetch = fetch;
+        fetch = function(url, init) {
+            if (typeof(url) === "object" && typeof(url.url) === "string") { url = url.url; }
+
+            function sbbSd(url, domain) {
+                var parser = document.createElement('a');
+                parser.href = url;
+                if (parser.host == '') { parser.href = parser.href; }
+                return parser.hostname == location.hostname;
+            }
+            if (sbbSd(url, document.domain)) { init = typeof init !== 'undefined' ? init : {}; if (typeof(init.headers) === "undefined") { init.headers = {}; } init.headers['X-MOD-SBB-CTYPE'] = 'fetch'; }
+            return nsbbfetch(url, init);
+        };
+    }
+
+    function sbbgc(check_name) { var start = document.cookie.indexOf(check_name + "="); var oVal = ''; var len = start + check_name.length + 1; if ((!start) && (document.cookie.substring(0, check_name.length) != check_name)) { oVal = ''; } else if (start == -1) { oVal = ''; } else { var end = document.cookie.indexOf(';', len); if (end == -1) end = document.cookie.length; var oVal = document.cookie.substring(len, end); }; return oVal; }
+
+    function addmg(inm, ext) {
+        var primgobj = document.createElement('IMG');
+        primgobj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port && window.location.port != 80 ? ':' + window.location.port : '') + "/sbbi/?sbbpg=" + inm + (ext ? "&" + ext : "");
+        var sbbDiv = document.getElementById('sbbfrcc');
+        sbbDiv.appendChild(primgobj);
+    };
+
+    function addprid(prid) {
+        var oldVal = sbbgc("PRLST");
+        if ((oldVal.indexOf(prid) == -1) && (oldVal.split('/').length < 5)) {
+            if (oldVal != '') oldVal += '/';
+            document.cookie = 'PRLST=' + oldVal + escape(prid) + ';path=/';
+        }
+    }
+    var sbbeccf = function() {
+        this.sp3 = "jass";
+        this.sf1 = function(vd) { return sf2(vd) + 32; };
+        var sf2 = function(avd) { return avd * 12; };
+        this.sf4 = function(yavd) { return yavd + 2; };
+        var strrp = function(str, key, value) {
+            if (str.indexOf('&' + key + '=') > -1 || str.indexOf(key + '=') == 0) {
+                var idx = str.indexOf('&' + key + '=');
+                if (idx == -1) idx = str.indexOf(key + '=');
+                var end = str.indexOf('&', idx + 1);
+                var newstr;
+                if (end != -1) newstr = str.substr(0, idx) + str.substr(end + (idx ? 0 : 1)) + '&' + key + '=' + value;
+                else newstr = str.substr(0, idx) + '&' + key + '=' + value;
+                return newstr;
+            } else return str + '&' + key + '=' + value;
+        };
+        var strgt = function(name, text) { if (typeof text != 'string') return ""; var nameEQ = name + "="; var ca = text.split(/[;&]/); for (var i = 0; i < ca.length; i++) { var c = ca[i]; while (c.charAt(0) == ' ') c = c.substring(1, c.length); if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length); } return ""; };
+        this.sfecgs = {
+            sbbgh: function() { var domain = document.location.host; if (domain.indexOf('www.') == 0) domain = domain.replace('www.', ''); return domain; },
+            f: function(name, value) {
+                var fv = "";
+                if (window.globalStorage) {
+                    var host = this.sbbgh();
+                    try {
+                        if (typeof(value) != "undefined") globalStorage[host][name] = value;
+                        else { fv = globalStorage[host][name]; if (typeof(fv.toString) != "undefined") fv = fv.toString(); }
+                    } catch (e) {}
+                }
+                return fv;
+            },
+            name: "sbbrf"
+        };
+        this.sfecls = {
+            f: function(name, value) {
+                var fv = "";
+                try {
+                    if (window.localStorage) {
+                        if (typeof(value) != "undefined") localStorage.setItem(name, value);
+                        else { fv = localStorage.getItem(name); if (typeof(fv.toString) != "undefined") fv = fv.toString(); }
+                    }
+                } catch (e) {}
+                return fv;
+            },
+            name: "sbbrf"
+        };
+        this.sbbcv = function(invl) {
+            try {
+                var invalArr = invl.split("-");
+                if (invalArr.length > 1) { if (invalArr[0] == "A" || invalArr[0] == "D") { invl = invalArr[1]; } else invl = ""; }
+                if (invl == null || typeof(invl) == "undefined" || invl == "falseImgUT" || invl == "undefined" || invl == "null" || invl != encodeURI(invl)) invl = "";
+                if (typeof(invl).toLowerCase() == "string")
+                    if (invl.length > 20)
+                        if (invl.substr(0, 2) != "h4") invl = "";
+            } catch (ex) { invl = ""; }
+            return invl;
+        };
+        this.sbbsv = function(fv) { for (var elm in this) { if (this[elm].name == "sbbrf") { this[elm].f("altutgv2", fv); } } document.cookie = "UTGv2=" + fv + ';expires=Tue, 31 Dec 2030 00:00:00 UTC;path=/'; };
+        this.sbbgv = function() {
+            var valArr = Array();
+            var currVal = "";
+            for (var elm in this) {
+                if (this[elm].name == "sbbrf") {
+                    currVal = this[elm].f("altutgv2");
+                    currVal = this.sbbcv(currVal);
+                    if (currVal != "") valArr[currVal] = (typeof(valArr[currVal]) != "undefined" ? valArr[currVal] + 1 : 1);
+                }
+            }
+            var lb = 0;
+            var fv = "";
+            for (var val in valArr) {
+                if (valArr[val] > lb) {
+                    fv = val;
+                    lb = valArr[val]
+                }
+            }
+            if (fv == "") fv = sbbgc("UTGv2");
+            fv = this.sbbcv(fv);
+            if (fv != "") this.sbbsv(fv);
+            else this.sbbsv("h45b2dab762174a6c9f853f7f47a773c2646");
+            return fv;
+        };
+    };
+
+    function m2vr(m1, m2) {
+        var i = 0;
+        var rc = "";
+        var est = "ghijklmnopqrstuvwyz";
+        var rnum;
+        var rpl;
+        var charm1 = m1.charAt(i);
+        var charm2 = m2.charAt(i);
+        while (charm1 != "" || charm2 != "") {
+            rnum = Math.floor(Math.random() * est.length);
+            rpl = est.substring(rnum, rnum + 1);
+            rc += (charm1 == "" ? rpl : charm1) + (charm2 == "" ? rpl : charm2);
+            i++;
+            charm1 = m1.charAt(i);
+            charm2 = m2.charAt(i);
+        }
+        return rc;
+    }
+
+    function sbbls(prid) {
+        try {
+            var eut = sbbgc("UTGv2");
+            window.sbbeccfi = new sbbeccf();
+            window.sbbgs = sbbeccfi.sbbgv();
+            if (eut != sbbgs && sbbgs != "" && typeof(sbbfcr) == "undefined") { addmg('utMedia', "vii=" + m2vr("ec91196bd41074c8a87ad7aa41388984", sbbgs)); }
+            var sbbiframeObj = document.createElement('IFRAME');
+            var dfx = new Date();
+            sbbiframeObj.id = 'SBBCrossIframe';
+            sbbiframeObj.title = 'SBBCrossIframe';
+            sbbiframeObj.tabindex = '-1';
+            sbbiframeObj.lang = 'en';
+            sbbiframeObj.style.visibility = 'hidden';
+            sbbiframeObj.setAttribute('aria-hidden', 'true');
+            sbbiframeObj.style.border = '0px';
+            if (document.all) {
+                sbbiframeObj.style.position = 'absolute';
+                sbbiframeObj.style.top = '-1px';
+                sbbiframeObj.style.height = '1px';
+                sbbiframeObj.style.width = '28px';
+            } else {
+                sbbiframeObj.style.height = '1px';
+                sbbiframeObj.style.width = '0px';
+            }
+            sbbiframeObj.scrolling = "NO";
+            sbbiframeObj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port && window.location.port != 80 ? ':' + window.location.port : '') + '/sbbi/?sbbpg=sbbShell&gprid=' + prid + '';
+            var sbbDiv = document.getElementById('sbbfrcc');
+            sbbDiv.appendChild(sbbiframeObj);
+        } catch (ex) {; }
+    }
+    try {
+        var y = unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+        document.getElementById('sbbhscc').innerHTML = y;
+        var x = unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+    } catch (e) { x = 'function genPid(){return "jser";}'; }
+    try { if (window.gprid == undefined) document.write('<' + 'script type="text/javascri' + 'pt">' + x + "var gprid=genPid();addprid(gprid);var sbbfcr=true;sbbls(gprid);<" + "/script>"); } catch (e) { addprid("dwer"); }
+
+    </script>
+    <div class="push">
+        <div class="area">
+            <div class="markdown-body preit">
+                <p>LỜI GIỚI THIỆU
+                    Tâm Trung Hành Lễ là những nghi lễ và phương pháp hóa giải trong nhân gian. Nhật sư – Hoàn đạo là người đã chuyển hóa từ sự nhiệm màu của hai chân lý thành cuốn Tâm Trung Hành Lễ. Đó là ánh sáng nhiệm màu từ chân lý vạn vật (luật nhân quả) và chân lý giác ngộ của Đức Ngũ Âm Hóa Đồng (Đức A Di Di Đà và Đức Nhật Sư Thích Ca).
+                    Tâm Trung Hành Lễ là Tâm từ bi vô lượng của Đức Ngũ Âm Hóa Đồng chiếu ánh sáng nhiệm màu của Phật Pháp lan tỏa trong các hình tướng lễ nghi, trong các phong tục tập quán của các dân tộc, các quốc gia. Phật Pháp như những dòng nước mát len lỏi, lan tỏa gột rửa những lấm bụi bẩn của các hình tướng (nghi lễ và phong tục của các quốc gia, dân tộc) để giúp cho các hình tướng được trong sáng, trong sạch. Sự trong sáng của hình tướng chính là sự đoàn kết, sự giúp đỡ, sự thương yêu của con người với con người, của toàn bộ chúng sinh với nhau. Sự trong sáng của hình tướng chính là con người không còn lừa hại nhau, con người không còn mê tín dị đoan, con người không còn lạm dụng lễ nghi để buôn thần bán thánh, con người thấu hiểu vũ trụ trời người, con người hành đạo bằng tâm.
+                    Tâm Trung Hành Lễ là dùng tâm từ bi để thực hiện các lễ nghi và hóa giải các vấn đề trong nhân gian. Mỗi chúng ta phải dùng tâm từ bi (không chấp ngã, tâm luôn vui vẻ, tâm biết buông xả những chấp ngã, sân hận) để đứng giữa trời đất, bằng sự nhất tâm chí thành cứu độ, hóa giải các vấn đề tâm linh vướng mắc hoặc các phong tục lễ nghi trong nhân gian. Tâm Trung Hành Lễ là các nghi lễ và phương pháp hóa giải tuân thủ luật nhân quả và hướng con người vận hành chân lý giác ngộ. Do đó thực hành theo Tâm Trung Hành Lễ là chúng sinh đứng giữa trời đất, dùng tâm vô điều kiện, không cầu mà tương tác với trời người để hành lễ hóa giải các khúc mắc, vướng mắc, nghi lễ phong tục trong sự tuân thủ luật nhân quả của vạn vật và hành theo sự giác ngộ. Sự không cầu mà hành đúng theo chân lý vạn vật và chân lý giác ngộ sẽ đem lại sự nhiệm màu vô lượng của Phật pháp đến với tất cả các phong tục, nghi lễ của các quốc gia khác nhau.
+                    Ý nghĩa của cuốn Tâm Trung Hành Lễ được Nhật sư – Hoàn Đạo kết tinh từ chân lý vạn vật và chân lý giác ngộ:</p>
+                <ul>
+                    <li>Mỗi người dân tự làm thầy tâm linh của chính mình.</li>
+                    <li>Không còn thầy bà lừa đảo hại người, không còn ai hành nghề mê tín dị đoan, không còn buôn thần bán thánh.</li>
+                    <li>Người dân đoàn kết, nâng cao giá trị đạo đức và giá trị nhân văn.</li>
+                    <li>Thấu hiểu và thực hành Tâm linh trong sáng bằng Tâm vô điều kiện với trí tuệ thấu hiểu.</li>
+                    <li>Là cẩm nang, là người thầy giúp đỡ chúng ta trong các nghi lễ phong tục, trong các khúc mắc tâm linh, trong các vấn đề cần hóa giải của nhân gian.
+                        Tâm Trung Hành Lễ được chia ra làm 4 phần:</li>
+                    <li>Phần I: Giới thiệu các lý thuyết, các chân lý, các cảnh giới, các bài thần chú.</li>
+                    <li>Phần II: Nghi lễ cho phần dương: Lễ Thần, Thánh, chùa, nhà cửa, điền thổ, con người.</li>
+                    <li>Phần III: Nghi lễ cho phần âm: Lễ người chết, thổ táng, hỏa táng, cải táng, mồ mả, gia tiên địa phủ.</li>
+                    <li>Phần IV: Phương pháp hóa giải quỷ, điện thờ, tinh tà, âm binh, điền thổ, mồ mả, bùa chú, trấn yểm và các vấn đề trong dân gian.</li>
+                </ul>
+                <p>Trong nhân gian, mỗi vùng miền có phong tục và cách thức thực hiện các vấn đề tâm linh khác nhau. Dù phong tục hay cách thức khác nhau thì việc thực hiện các nghi lễ và xử lý tâm linh trong cuốn “Tâm Trung Hành Lễ” được coi là trọng yếu và mấu chốt để giúp cho các cách thực và phong tục đó đạt đến hiệu quả tối đa trong việc xử lý.
+                    Trong cuốn lễ hay có từ “Ngưỡng”, đây chính là nghĩ thật sâu về các ngài để tạo ra sóng rung động tiếp dẫn năng lượng tốt của các ngài để độ siêu thoát cho vong cô hồn, âm binh, tinh tà, quỷ, và gia hộ việc xử lý cho nhân gian.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+.ra-button {
+    padding: .3em .9em;
+    border-radius: .25em;
+    background: linear-gradient(#fff, #efefef);
+    box-shadow: 0 1px .2em gray;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ra-button img {
+    height: 1em;
+    margin: 0 .5em 0 0;
+}
+
+</style>
+
+<script>
+function readAloud(au, pl) { var bs = "https://assets.sitespeaker.com/embed/"; /iPad|iPhone|iPod/.test(navigator.userAgent) && (au.src = bs + "sound/silence.mp3", au.play()); var xhr = new XMLHttpRequest;
+    xhr.open("GET", bs + "js/readaloud.min.js?ajax=1", !0), xhr.onreadystatechange = function() { 4 == xhr.readyState && 200 == xhr.status && (eval(xhr.responseText), readAloudInit(au, pl)) }, xhr.send(null) }
+
+</script>
+
+</html>
