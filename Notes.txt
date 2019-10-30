@@ -17,3 +17,32 @@
 
         - If you use WordPress, install our WordPress plugin:
             https://wordpress.org/plugins/sitespeaker-widget/
+
+- Embed code:
+<script>
+function readAloud(au, pl) {
+    var bs = "https://assets.sitespeaker.com/embed/";
+    /iPad|iPhone|iPod/.test(navigator.userAgent) && (au.src = bs + "sound/silence.mp3", au.play());
+    var xhr = new XMLHttpRequest;
+    xhr.open("GET", bs + "js/readaloud.min.js?ajax=1", !0), xhr.onreadystatechange = function() { 4 == xhr.readyState && 200 == xhr.status && (eval(xhr.responseText), readAloudInit(au, pl)) }, xhr.send(null)
+}
+</script>
+
+<div id="ra-player" data-skin="https://assets.sitespeaker.com/embed/skins/default">
+<div class="ra-button" onclick="readAloud(document.getElementById('ra-audio'), document.getElementById('ra-player'))"><img src="https://assets.sitespeaker.com/embed/skins/default/play-icon.png" /></div>
+</div>
+<audio id="ra-audio" data-lang="vi-VN" data-voice="Google vi-VN-Standard-A" data-key="348dc83cbfb50dd27ce88625a23dbc79"></audio>
+
+- API:
+    + bash:
+        curl 'https://ws.sitespeaker.com/synthesize' -H 'authority: ws.sitespeaker.com' -H 'origin: http://neo2271.minhtamgroup.org' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' -H 'dnt: 1' -H 'content-type: application/json' -H 'accept: */*' -H 'sec-fetch-site: cross-site' -H 'sec-fetch-mode: cors' -H 'referer: http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/01/02.html' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: vi,en-US;q=0.9,en;q=0.8' --data-binary '{"text":"Thiền kiểm tra tầng năng lượng trong Tuệ linh hai ngài thấy tầng năng lượng màu vàng chói sáng rực rỡ như ánh mặt trời. Đó là ánh sáng sự thật của hai chân lý.","lang":"vi-VN","voice":"Google vi-VN-Standard-A","key":"348dc83cbfb50dd27ce88625a23dbc79"}' --compressed ;
+
+        curl 'https://ws.sitespeaker.com/synthesize' -H 'authority: ws.sitespeaker.com' -H 'origin: http://neo2271.minhtamgroup.org' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' -H 'dnt: 1' -H 'content-type: application/json' -H 'accept: */*' -H 'sec-fetch-site: cross-site' -H 'sec-fetch-mode: cors' -H 'referer: http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/01/02.html' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: vi,en-US;q=0.9,en;q=0.8'--compressed  --data-binary @books/test.txt
+
+        curl 'https://ws.sitespeaker.com/synthesize' -H 'authority: ws.sitespeaker.com' -H 'origin: http://neo2271.minhtamgroup.org' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36' -H 'dnt: 1' -H 'content-type: application/json' -H 'accept: */*' -H 'sec-fetch-site: cross-site' -H 'sec-fetch-mode: cors'-H 'accept-encoding: gzip, deflate, br' -H 'accept-language: vi,en-US;q=0.9,en;q=0.8'--compressed  --data-binary @books/test.txt  -H 'referer: http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/01/03'
+
+        https://s3-us-east-2.amazonaws.com/sitespeaker-cache/article-audio/52825620b8643f46187f25a12867ad0e?v=8c5e3e434e6293c20ffcf852819c8812
+        https://s3-us-east-2.amazonaws.com/sitespeaker-cache/article-audio/854197e6ca94515d1c55183cda8689b0?v=8b55cf312d0e58dd4355229234125b8a
+
+            test:
+                line: 98511
