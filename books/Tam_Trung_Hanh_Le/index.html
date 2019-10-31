@@ -5,6 +5,13 @@
     <h1>
         <p><a href="http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/Tam_Trung_Hanh_Le.html">Tâm Trung Hành Lễ</a></p>
     </h1>
+    <center>
+        <strong>Playback speed:</strong>
+        <button onclick="setPlaySpeed_0_5()" type="button">0.5</button>
+        <button onclick="setPlaySpeed_1_0()" type="button">1.0</button>
+        <button onclick="setPlaySpeed_1_5()" type="button">1.5</button>
+        <button onclick="setPlaySpeed_2_0()" type="button">2.0</button>
+    </center>
     <p>part_00: <a href="http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/00/00.html">00</a></p>
     <p><audio id="au_p01" style="width: 100%;" controls="controls">
             <source src="audio/p01.mp3" type="audio/mpeg" /></audio></p>
@@ -19,15 +26,33 @@
         <a href="http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/01/08.html"> 08</a>
         <a href="http://neo2271.minhtamgroup.org/books/Tam_Trung_Hanh_Le/01/09.html"> 09</a>
     </p>
-    <p><audio id="p02" style="width: 100%;" controls="controls">
+    <p><audio id="au_p02" style="width: 100%;" controls="controls">
             <source src="audio/p02.mp3" type="audio/mpeg" /></audio></p>
 </body>
 
 <script>
 var au_p01 = document.getElementById("au_p01");
 var au_p02 = document.getElementById("au_p02");
-au_p01.playbackRate = 1.5;
-au_p02.playbackRate = 1.5;
+
+function setPlaySpeed_0_5() {
+    au_p01.playbackRate = 0.5;
+    au_p02.playbackRate = 0.5;
+}
+
+function setPlaySpeed_1_0() {
+    au_p01.playbackRate = 1.0;
+    au_p02.playbackRate = 1.0;
+}
+
+function setPlaySpeed_1_5() {
+    au_p01.playbackRate = 1.5;
+    au_p02.playbackRate = 1.5;
+}
+
+function setPlaySpeed_2_0() {
+    au_p01.playbackRate = 2.0;
+    au_p02.playbackRate = 2.0;
+}
 </script>
 
 </html>
